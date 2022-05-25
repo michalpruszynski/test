@@ -1,0 +1,15 @@
+events.added_event:
+  path: '/events'
+  defaults:
+    _controller: '\Drupal\custom_events\Controller\IndexController::showContent'
+    _title: 'Events'
+  requirements:
+    _permission: 'access content'
+
+events.configuration:
+  path: '/events/add'
+  defaults:
+    _form: '\Drupal\custom_events\Form\ConfigForm'
+    _title: 'Add event'
+  requirements:
+    _permission: 'administer content'
